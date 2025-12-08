@@ -17,6 +17,7 @@
   <ul class="navbar-nav">
     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
     <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
+        <li class="nav-item"><a class="nav-link" href="veille.html">Veille Techno</a></li>
     <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisation</a></li>
   </ul>
 </nav>
@@ -42,45 +43,39 @@
   </div>
 </section>
 
-<button id="toggle-theme" title="Changer le thème">
-  🌙
-</button>
+<button id="toggle-theme" title="Changer le thème" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">🌙</button>
 
 <script>
-  const btn = document.getElementById('toggle-theme');
-  const body = document.body;
+  (function() {
+    // 1. DÉTECTION IMMÉDIATE (Pour appliquer le thème avant même que tu cliques)
+    const savedTheme = localStorage.getItem('theme');
+    const btn = document.getElementById('toggle-theme');
+    const body = document.body;
 
-  // Charge le thème stocké en localStorage si présent
-  if (localStorage.getItem('theme') === 'light') {
-    body.classList.add('light-theme');
-    btn.textContent = '🌞';
-  }
-
-  btn.addEventListener('click', () => {
-    body.classList.toggle('light-theme');
-    if (body.classList.contains('light-theme')) {
-      btn.textContent = '🌞';
-      localStorage.setItem('theme', 'light');
-    } else {
-      btn.textContent = '🌙';
-      localStorage.setItem('theme', 'dark');
+    // Si la mémoire dit "light", on force le mode clair tout de suite
+    if (savedTheme === 'light') {
+      body.classList.add('light-theme');
+      if (btn) btn.textContent = '🌞';
     }
-  });
-</script>
-<script>
-  document.querySelectorAll('button, .card, a.nav-link').forEach(el => {
-    el.addEventListener('mousedown', () => {
-      el.style.transform = 'scale(0.96)';
-    });
-    el.addEventListener('mouseup', () => {
-      el.style.transform = 'scale(1)';
-    });
-    el.addEventListener('mouseleave', () => {
-      el.style.transform = 'scale(1)';
-    });
-  });
-</script>
 
+    // 2. GESTION DU CLIC
+    if (btn) {
+      btn.addEventListener('click', function() {
+        // On bascule la classe
+        body.classList.toggle('light-theme');
+
+        // On vérifie le résultat pour sauvegarder la bonne info
+        if (body.classList.contains('light-theme')) {
+          localStorage.setItem('theme', 'light'); // On écrit "light" dans la mémoire
+          btn.textContent = '🌞';
+        } else {
+          localStorage.setItem('theme', 'dark');  // On écrit "dark" dans la mémoire
+          btn.textContent = '🌙';
+        }
+      });
+    }
+  })();
+</script>
 </body>
 </html>
 

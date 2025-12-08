@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veille Technologique – Esteban Laurent</title>
+  <link href="Style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+  <h1>Esteban Laurent</h1>
+  <p>Étudiant en BTS SIO SLAM</p>
+</header>
+
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+    <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
+    <li class="nav-item"><a class="nav-link active" href="veille.html">Veille Techno</a></li>
+    <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisation</a></li>
+
+  </ul>
+</nav>
+
+<section id="sujet-veille">
+  <h2>Ma Veille Technologique</h2>
+
+  <div class="resume-bloc">
+    <h3><i class="fas fa-cloud"></i> Le Cloud Computing</h3>
+    <p><strong>Définition :</strong> Le cloud computing (« informatique dans les nuages ») correspond à l'accès via un réseau de télécommunications, à la demande et en libre-service, à des ressources informatiques partagées configurables.</p>
+    <p style="margin-top: 10px;">
+        Concrètement, cela permet de déporter le stockage et la puissance de calcul sur des serveurs distants plutôt que sur sa machine locale. C'est aujourd'hui la base de l'infrastructure web moderne (AWS, Azure, Google Cloud).
+    </p>
+  </div>
+
+  <h2>Mise en Œuvre</h2>
+  <div class="mise-en-oeuvre-grid">
+    <div class="mise-en-oeuvre-card">
+        <h4><i class="fas fa-code"></i> Environnements de Dev</h4>
+        <p>Utilisation d'environnements hébergés dans le cloud pour coder sans contrainte matérielle locale.</p>
+        <hr style="opacity: 0.2; margin: 10px 0;">
+        <p><strong>Outils :</strong> AWS Cloud9, GitHub Codespaces.</p>
+    </div>
+    <div class="mise-en-oeuvre-card">
+        <h4><i class="fas fa-users"></i> Collaboration & Stockage</h4>
+        <p>Partage de fichiers et travail collaboratif en temps réel pour assurer la cohérence des versions.</p>
+        <hr style="opacity: 0.2; margin: 10px 0;">
+        <p><strong>Outils :</strong> Google Drive, OneDrive.</p>
+    </div>
+  </div>
+
+<h2 style="margin-top: 40px;">Bornages et Outils de veille</h2>
+
+<div class="bornage-grid">
+    
+    <div class="bornage-card">
+        <h3>Outils de Veille</h3>
+        
+        <div class="bornage-item">
+            <strong>Flipboard (Retenu) :</strong>
+            Outil intuitif et hautement personnalisable. Note très positive pour la curation de contenu.
+        </div>
+
+        <div class="bornage-item">
+            <strong>NewsBlur (Testé) :</strong>
+            Interface utilisateur complexe et modèle payant rédhibitoire. Non retenu.
+        </div>
+        
+        <div class="bornage-item">
+            <strong>Mots clés suivis :</strong>
+            Cloud Computing, Serverless, OpenStack, Docker.
+        </div>
+        
+        <div class="bornage-item">
+            <strong>Sources principales :</strong>
+            LeMagIT, ZDNet, Blog AWS, GitHub Blog.
+        </div>
+    </div>
+
+    <div class="bornage-card">
+        <h3>Bornages</h3>
+        
+        <div class="bornage-item">
+            <strong>Cloud Public :</strong>
+            Ressources accessibles à tous via Internet (Ex: AWS, Azure). Faible coût d'entrée.
+        </div>
+
+        <div class="bornage-item">
+            <strong>Cloud Privé :</strong>
+            Serveurs dédiés à une organisation unique. Plus sécurisé mais plus coûteux à maintenir.
+        </div>
+
+        <div class="bornage-item">
+            <strong>Cloud Hybride :</strong>
+            Combinaison des deux : données sensibles en privé, puissance de calcul en public.
+        </div>
+
+        <div class="bornage-item" style="border-top: 1px solid #eee; padding-top: 10px; margin-top: 15px;">
+            <strong>Leaders du Marché :</strong>
+            1. AWS (34%)<br>
+            2. Microsoft Azure (21%)<br>
+            3. Google Cloud (11%)
+        </div>
+    </div>
+
+</div>
+
+  <h2>Mes Actualités</h2>
+  <div id="news-container" class="news-grid">
+    
+    <div class="card news-item" data-page="1">
+        <h4>AWS re:Invent : Trainium 3</h4>
+        <small>04 Décembre 2024 - InformatiqueNews</small>
+        <p>AWS dévoile sa puce Trainium 3 et l'Ultracluster Rainier. Une puissance de calcul massive pour concurrencer Nvidia sur l'IA générative.</p>
+        <a href="https://www.informatiquenews.fr/reinvent-2024-amazon-aws-annonce-trainium3-et-lultracluster-rainier-pour-l-ia-102054" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="1">
+        <h4>Les Agents IA d'AWS</h4>
+        <small>08 Janvier 2025 - Devoteam</small>
+        <p>Analyse des annonces AWS : les agents génératifs automatisent désormais des workflows complexes (facturation, support) via Amazon Q.</p>
+        <a href="https://www.devoteam.com/expert-view/aws-ai-reinvent-2024/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="1">
+        <h4>Incidents Cloudflare</h4>
+        <small>Novembre 2024/2025 - Cloudflare Blog</small>
+        <p>Suivi technique des interruptions de service. Analyse post-incident des perturbations de routage ayant affecté l'accès à certains services web.</p>
+        <a href="https://blog.cloudflare.com/tag/outage/" target="_blank" class="btn-certif">Lire le rapport</a>
+    </div>
+
+    <div class="card news-item" data-page="1">
+        <h4>Microsoft : Résultats Cloud</h4>
+        <small>30 Octobre 2024 - Microsoft Source</small>
+        <p>Le Cloud Microsoft (Azure) tire la croissance avec une hausse de 20% des revenus. L'IA contribue massivement à ces résultats trimestriels.</p>
+        <a href="https://news.microsoft.com/source/2024/10/30/microsoft-cloud-strength-drives-first-quarter-results-7/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="2" style="display:none;">
+        <h4>Claude 3.5 & Computer Use</h4>
+        <small>22 Octobre 2024 - Anthropic</small>
+        <p>Lancement de la fonctionnalité "Computer Use" qui permet à l'IA Claude 3.5 de contrôler un ordinateur (souris, clavier) comme un humain.</p>
+        <a href="https://www.anthropic.com/news/3-5-models-and-computer-use" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="2" style="display:none;">
+        <h4>OpenAI lance le modèle o1</h4>
+        <small>Décembre 2024 - Wikipédia/OpenAI</small>
+        <p>Sortie finale du modèle o1 (Strawberry), capable de raisonner sur des problèmes complexes de mathématiques et de code avant de répondre.</p>
+        <a href="https://openai.com/index/learning-to-reason-with-llms/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="2" style="display:none;">
+        <h4>OVHcloud & Quantique</h4>
+        <small>Mars 2024 - Maddyness</small>
+        <p>OVHcloud inaugure son premier ordinateur quantique avec la startup Quandela, marquant une étape clé pour la souveraineté technologique.</p>
+        <a href="https://www.maddyness.com/2024/03/18/ovhcloud-inaugure-son-tout-premier-ordinateur-quantique-avec-la-startup-quandela/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="2" style="display:none;">
+        <h4>Régulation Cloud Arcep</h4>
+        <small>Juin 2025 - Arcep</small>
+        <p>L'Arcep et les régulateurs européens publient leurs avis sur les défis du Cloud : interopérabilité, DMA et équité concurrentielle.</p>
+        <a href="https://www.arcep.fr/actualites/les-prises-de-parole/detail/n/tribune-adlc-dgccrf-arcep-arcom-cnil-050625.html" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="3" style="display:none;">
+        <h4>Marché IaaS : +22%</h4>
+        <small>Août 2025 - Gartner</small>
+        <p>Le marché mondial du IaaS a cru de 22.5% en 2024. Amazon garde la tête (37.7%) suivi de Microsoft (23.9%) et Google (9%).</p>
+        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-06-gartner-says-worldwide-iaas-public-cloud-services-market-grew-22-point-5-percent-in-2024" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="3" style="display:none;">
+        <h4>Investissements Google</h4>
+        <small>Février 2025 - DCmag</small>
+        <p>Google annonce investir 75 milliards de dollars en 2025, principalement dans ses datacenters pour soutenir la demande en IA.</p>
+        <a href="https://dcmag.fr/google-va-investir-75-milliards-en-2025/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="3" style="display:none;">
+        <h4>GitHub Copilot & Claude</h4>
+        <small>29 Octobre 2024 - Anthropic</small>
+        <p>Intégration officielle du modèle Claude 3.5 Sonnet dans GitHub Copilot, offrant aux développeurs une alternative performante aux modèles GPT.</p>
+        <a href="https://www.anthropic.com/news/github-copilot" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="3" style="display:none;">
+        <h4>Explosion Dépenses Datacenter</h4>
+        <small>Janvier 2025 - CIO Online</small>
+        <p>Les dépenses en équipements pour datacenters ont atteint un niveau record, portées à 55% par les fournisseurs de Cloud Public.</p>
+        <a href="https://www.cio-online.com/actualites/lire-la-croissance-des-depenses-dans-les-datacenters-atteint-un-niveau-record-16093.html" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+</div>
+  </div>
+
+  <div class="pagination-container">
+    <button class="page-btn active" onclick="showPage(1)">1</button>
+    <button class="page-btn" onclick="showPage(2)">2</button>
+    <button class="page-btn" onclick="showPage(3)">3</button>
+  </div>
+
+</section>
+<button id="toggle-theme" title="Changer le thème" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">🌙</button>
+
+<script>
+  (function() {
+    // 1. DÉTECTION IMMÉDIATE (Pour appliquer le thème avant même que tu cliques)
+    const savedTheme = localStorage.getItem('theme');
+    const btn = document.getElementById('toggle-theme');
+    const body = document.body;
+
+    // Si la mémoire dit "light", on force le mode clair tout de suite
+    if (savedTheme === 'light') {
+      body.classList.add('light-theme');
+      if (btn) btn.textContent = '🌞';
+    }
+
+    // 2. GESTION DU CLIC
+    if (btn) {
+      btn.addEventListener('click', function() {
+        // On bascule la classe
+        body.classList.toggle('light-theme');
+
+        // On vérifie le résultat pour sauvegarder la bonne info
+        if (body.classList.contains('light-theme')) {
+          localStorage.setItem('theme', 'light'); // On écrit "light" dans la mémoire
+          btn.textContent = '🌞';
+        } else {
+          localStorage.setItem('theme', 'dark');  // On écrit "dark" dans la mémoire
+          btn.textContent = '🌙';
+        }
+      });
+    }
+  })();
+</script>
+</html>

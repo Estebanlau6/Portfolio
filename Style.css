@@ -1,80 +1,33 @@
+/* ==========================================================================
+   1. BASES & TYPOGRAPHIE (THÈME SOMBRE PAR DÉFAUT)
+   ========================================================================== */
 body {
-  background-color: #1e1e1e; /* gris très foncé, plus doux */
-  color: #cfcfcf;
-  /* le reste de tes styles... */
-}
-
-
-header {
-  padding: 3rem 1rem;
-  text-align: center;
-  background-color: #101010; /* plus sombre */
-  box-shadow: none; /* ombre supprimée pour sobriété */
-  margin-bottom: 2rem;
-}
-
-header h1 {
-  font-weight: 600;
-  font-size: 2.5rem;
-  margin-bottom: 0.3rem;
-  color: #e0e0e0; /* un peu plus clair que le texte */
-}
-
-header p {
-  color: #999999; /* plus foncé, plus doux */
-  font-size: 1.1rem;
-  margin-bottom: 0;
-}
-
-nav.navbar {
-  background-color: #121212; /* sombre */
-  padding: 0.5rem 1rem;
-  margin-bottom: 3rem;
-  justify-content: center;
-  box-shadow: none;
-}
-
-nav.navbar .navbar-nav {
-  list-style: none;
-  padding: 0;
+  background-color: #1e1e1e; /* Gris très foncé */
+  color: #cfcfcf;            /* Texte gris clair */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav.navbar .navbar-nav .nav-link {
-  color: #888888; /* plus sombre */
-  font-weight: 500;
-  font-size: 1rem;
+/* Liens par défaut */
+a {
+  color: #5599ff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-nav.navbar .navbar-nav .nav-link:hover,
-nav.navbar .navbar-nav .nav-link:focus {
-  color: #d1d1d1;
+a:hover {
   text-decoration: underline;
+  color: #77aaff;
 }
 
-section {
-  max-width: 700px;
-  margin: 0 auto 4rem;
-  padding: 1rem 2rem;
-  background-color: #121212; /* sombre */
-  border-radius: 6px;
-  box-shadow: none;
+/* Titres par défaut */
+h1, h2, h3, h4, h5 {
+  color: #e0e0e0;
 }
 
-section h2 {
-  font-weight: 600;
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-  border-bottom: 1.5px solid #333333;
-  padding-bottom: 0.3rem;
-  color: #ddd;
-}
-
+/* Listes */
 ul {
   padding-left: 1.2rem;
   color: #bbb;
@@ -85,82 +38,139 @@ ul li {
   line-height: 1.4;
 }
 
-h5 {
-  margin-top: 2rem;
-  font-weight: 600;
-  color: #999;
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+header {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #101010;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
 }
 
-/* Pour les liens dans le contenu */
-a {
-  color: #5599ff;
+header h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  color: #e0e0e0;
+}
+
+header p {
+  color: #999;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+nav.navbar {
+  background-color: #121212;
+  padding: 0.5rem 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+nav.navbar .navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav.navbar .nav-link {
+  color: #888;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+nav.navbar .nav-link:hover,
+nav.navbar .nav-link:focus,
+nav.navbar .nav-link.active {
+  color: #d1d1d1;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. SECTIONS & CONTAINERS
+   ========================================================================== */
+section {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+}
+
+section h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1.5px solid #333;
+  padding-bottom: 0.3rem;
+  color: #ddd;
+}
+
+/* ==========================================================================
+   4. COMPOSANTS GÉNÉRAUX
+   ========================================================================== */
+.btn-retour {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 15px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.btn-retour:hover {
+  background-color: #555;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #77aaff;
+/* Bouton pour voir les PDF/Articles */
+a.btn-certif, button.btn-certif {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+a.btn-certif:hover, button.btn-certif:hover {
+    background-color: #0056b3;
 }
 
-/* Mode clair */
-body.light-theme {
-  background-color: #f9f9f9; /* clair */
-  color: #222; /* texte bien sombre */
+/* Galerie PDF */
+.pdf-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.pdf-gallery.hidden {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+.pdf-gallery iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
 }
 
-
-body.light-theme header {
-  background-color: #eee;
-  color: #222;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-body.light-theme header h1,
-body.light-theme header p {
-  color: #222; /* bien sombre */
-}
-
-
-
-body.light-theme nav.navbar {
-  background-color: #ddd;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-body.light-theme nav.navbar .navbar-nav .nav-link {
-  color: #555;
-}
-
-body.light-theme nav.navbar .navbar-nav .nav-link:hover,
-body.light-theme nav.navbar .navbar-nav .nav-link:focus {
-  color: #000;
-}
-
-body.light-theme section {
-  background-color: #fff;
-  color: #222;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-body.light-theme h2, 
-body.light-theme h5, 
-body.light-theme ul li {
-  color: #333;
-}
-
-body.light-theme a {
-  color: #0066cc;
-}
-
-body.light-theme a:hover {
-  color: #004999;
-}
-
-/* Transition douce */
-body, header, nav.navbar, section {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
+/* Bouton Thème */
 #toggle-theme {
   position: fixed;
   bottom: 20px;
@@ -174,191 +184,56 @@ body, header, nav.navbar, section {
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
   font-size: 1.2rem;
   z-index: 1000;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s;
 }
-
 #toggle-theme:hover {
   background-color: #555;
-  color: #fff;
 }
 
-.certif-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.certif-card {
-  background-color: #1a1a1a;
-  color: #eee;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 1.2rem;
-  width: 280px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.certif-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
-}
-
-.certif-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.certif-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-body.light-theme .certif-card {
-  background-color: #f1f1f1;
-  color: #111;
-}
-
-body.light-theme .certif-card p {
-  color: #555;
-}
-
-.card-container {
+/* ==========================================================================
+   5. PAGE ACCUEIL & CERTIFICATIONS
+   ========================================================================== */
+.certif-container, .card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
   margin-top: 2rem;
+  align-items: flex-start;
 }
 
-/* Style par défaut (sombre) */
-.card {
-  background-color: #1e1e1e;
-  color: #eee;
+.card, .certif-card {
+  width: 250px;
   padding: 1.2rem 1.5rem;
   border-radius: 10px;
-  width: 250px;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease, background-color 0.3s, color 0.3s;
   display: flex;
   flex-direction: column;
-}
-
-.card:hover {
-  background-color: #292929;
-  transform: scale(1.03);
-}
-
-/* Mode clair */
-body.light-theme .card {
-  background-color: #f1f1f1;
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-body.light-theme .card:hover {
-  background-color: #e2e2e2;
-}
-
-.certifications-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-top: 1rem;
-  align-items: flex-start; /* au lieu de stretch */
-
-}
-
-.card {
-  background-color: var(--card-bg, #1e1e1e);
-  padding: 1rem;
-  border-radius: 12px;
-  width: 250px;
-  text-align: center;
+  transition: transform 0.2s ease, background-color 0.3s;
+  background-color: #1e1e1e;
+  color: #eee;
+  border: 1px solid #333;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
 }
 
-.card:hover {
+.card:hover, .certif-card:hover {
+  background-color: #292929;
   transform: translateY(-5px);
 }
 
-.card h4 {
+.card h4, .certif-card h4 {
   margin-bottom: 0.5rem;
+  color: #fff;
 }
-
-.card p {
+.card p, .certif-card p {
   font-size: 0.9rem;
   color: #aaa;
 }
 
-.btn-certif {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #4c8ef7;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 0.5rem;
-}
-
-.btn-certif:hover {
-  background-color: #6ea7ff;
-}
-
-.card.disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-.btn-certif.inactive {
-  background-color: #666;
-  cursor: not-allowed;
-}
-
-.pdf-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
-  transition: opacity 0.5s ease;
-  opacity: 1;
-}
-
-.pdf-gallery iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.pdf-gallery iframe:hover {
-  transform: scale(1.03);
-}
-
-/* Animation d’apparition */
-.pdf-gallery.hidden {
-  opacity: 0;
-  pointer-events: none;
-  height: 0;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  transition: opacity 0.5s ease, height 0.3s ease;
-}
-
+/* Liste Centres d'intérêts */
 .interets-list {
   list-style: none;
   padding: 0;
 }
-
 .interets-list li {
   font-size: 1.1em;
   margin: 6px 0;
@@ -366,64 +241,242 @@ body.light-theme .card:hover {
   align-items: center;
   gap: 8px;
 }
-
 .interets-list i {
-  color: #ffcc00; /* tu peux changer la couleur pour matcher ton thème */
-  font-size: 1.2em;
-}
-/* Mode clair pour les centres d'intérêts */
-body.light-theme .interets-list li {
-  color: #333;
-}
-body.light-theme .interets-list i {
-  color: #ff9900;
+  color: #ffcc00;
 }
 
-.stages-container {
+/* ==========================================================================
+   6. PAGE VEILLE TECHNO (CORRIGÉ NOIR PROFOND)
+   ========================================================================== */
+.intro-veille {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Conteneur */
+.bornage-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Cartes */
+.bornage-card {
+  flex: 1;
+  min-width: 0;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #121212; 
+  color: #ccc;
+}
+
+.bornage-card h3 {
+  margin-top: 0;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.bornage-item {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.bornage-item strong {
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+/* Grille News */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+.page-btn {
+  padding: 8px 15px;
+  border: 1px solid #444;
+  background: #2c2c2c;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.page-btn.active {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+/* ==========================================================================
+   7. PAGE STAGE
+   ========================================================================== */
+.stage-header-info {
+  display: flex;
+  justify-content: space-around;
+  background: #2c2c2c;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #444;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.info-pill {
+  font-weight: bold;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stage-grid {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
-  align-items: stretch; /* force la même hauteur */
-  flex-wrap: wrap;      /* responsive : passe en colonne si écran trop petit */
-  margin-top: 20px;
-  max-width: 900px;     /* largeur max du container */
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
-.card {
-  flex: 1 1 45%;        /* 2 cartes côte à côte */
-  background: #f0f0f0;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 15px;
-}
-
-
-/* prévisualisation en format A4 */
-.attestation embed {
-  width: 100%;
-  aspect-ratio: 210 / 297; /* ratio A4 */
-  border: 1px solid #444;
+.stage-card {
+  flex: 1;
+  background: #2c2c2c;
+  color: #eee;
+  padding: 25px;
   border-radius: 8px;
-  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border: 1px solid #444;
+  min-width: 300px;
 }
 
-.btn-retour {
-  display: inline-block;
+.stage-card h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
   margin-bottom: 20px;
-  padding: 8px 15px;
-  background-color: #333;
   color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  font-size: 1.3rem;
 }
 
-.btn-retour:hover {
-  background-color: #555;
+.tech-badge {
+  display: inline-block;
+  background-color: #444;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: 3px;
+  border: 1px solid #555;
+}
+
+/* ==========================================================================
+   8. THÈME CLAIR (LIGHT MODE) - SECTION CORRIGÉE ET FORCÉE
+   ========================================================================== */
+/* On force le texte NOIR (#000000) sur toutes les balises quand le mode clair est actif */
+
+body.light-theme {
+  background-color: #f9f9f9 !important;
+  color: #000000 !important;
+}
+
+/* --- TEXTE GÉNÉRAL FORCÉ EN NOIR --- */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6,
+body.light-theme p,
+body.light-theme span,
+body.light-theme li,
+body.light-theme div,
+body.light-theme strong,
+body.light-theme em {
+  color: #000000 !important;
+}
+
+/* --- HEADER & NAV --- */
+body.light-theme header {
+  background-color: #eee;
+  color: #000000;
+}
+body.light-theme nav.navbar {
+  background-color: #ddd;
+}
+body.light-theme nav.navbar .nav-link {
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+/* --- SECTIONS --- */
+body.light-theme section h2 {
+  border-color: #ccc;
+}
+
+/* --- CARTES GÉNÉRALES --- */
+body.light-theme .card, 
+body.light-theme .certif-card,
+body.light-theme .bornage-card,
+body.light-theme .stage-card,
+body.light-theme .stage-header-info {
+  background-color: #ffffff !important;
+  border-color: #ccc !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #000000 !important;
+}
+
+/* Survol Cartes */
+body.light-theme .card:hover, 
+body.light-theme .certif-card:hover {
+  background-color: #f2f2f2 !important;
+}
+
+/* --- ÉLÉMENTS SPÉCIFIQUES --- */
+body.light-theme a {
+  color: #0066cc !important; /* Liens Bleus */
+}
+/* Sauf les boutons avec fond couleur */
+body.light-theme a.btn-certif,
+body.light-theme button.btn-certif,
+body.light-theme .page-btn.active {
+    color: #ffffff !important; /* Texte Blanc sur boutons bleus */
+}
+/* Sauf les badges tech */
+body.light-theme .tech-badge {
+  background-color: #eef2f7;
+  color: #000000 !important;
+  border-color: #dce4ec;
+}
+
+/* Icônes */
+body.light-theme i {
+    color: #000000;
+}
+/* Exception pour les étoiles/intérêts */
+body.light-theme .interets-list i {
+  color: #e68a00 !important;
+}
+
+/* Lignes de séparation */
+body.light-theme .bornage-item[style*="border-top"] {
+    border-top-color: #ccc !important;
 }
