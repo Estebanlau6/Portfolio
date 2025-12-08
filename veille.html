@@ -204,6 +204,37 @@
     <button class="page-btn" onclick="showPage(3)">3</button>
   </div>
 
+  <script>
+  function showPage(pageNumber) {
+    // 1. On cache toutes les news
+    const allItems = document.querySelectorAll('.news-item');
+    allItems.forEach(item => {
+      item.style.display = 'none';
+    });
+
+    // 2. On affiche seulement celles de la page demandée
+    const itemsToShow = document.querySelectorAll(`.news-item[data-page="${pageNumber}"]`);
+    itemsToShow.forEach(item => {
+      // On remet 'flex' pour garder la mise en page de la carte
+      item.style.display = 'flex'; 
+    });
+
+    // 3. Gestion des boutons (Bleu pour l'actif)
+    const buttons = document.querySelectorAll('.page-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // On active le bon bouton (Index = pageNumber - 1)
+    if (buttons[pageNumber - 1]) {
+      buttons[pageNumber - 1].classList.add('active');
+    }
+  }
+
+  // Petit correctif : Au chargement, on force l'affichage de la page 1
+  document.addEventListener('DOMContentLoaded', () => {
+     showPage(1);
+  });
+</script>
+
 </section>
 <button id="toggle-theme" title="Changer le thème" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">🌙</button>
 
