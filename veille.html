@@ -6,7 +6,7 @@
   <title>Veille Technologique – Esteban Laurent</title>
   <link href="Style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20260330" defer></script>
 </head>
 <body>
 
@@ -105,134 +105,219 @@
     </div>
   </div>
 
+  <h2>Retour d'expérience (REX)</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3><i class="fas fa-lightbulb"></i> Ce qui fonctionne</h3>
+      <ul>
+        <li>Le suivi hebdomadaire des sources cloud permet de detecter rapidement les tendances IA/infra.</li>
+        <li>Le bornage par mots-clés (cloud, serverless, souverainete, Kubernetes) evite la surcharge d'information.</li>
+        <li>Le format fiche courte (date, source, resume, impact) facilite la restitution.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><i class="fas fa-wrench"></i> Axes d'amelioration</h3>
+      <ul>
+        <li>Ajouter une source institutionnelle recurrente (ANSSI, ENISA, Arcep) pour l'angle reglementaire.</li>
+        <li>Taguer chaque news par categorie (securite, data, IA, souverainete) pour les comparaisons mensuelles.</li>
+        <li>Conserver une synthese mensuelle en PDF comme trace de veille.</li>
+      </ul>
+    </div>
+  </div>
+
   <h2>Mes Actualités</h2>
-  <div id="news-container" class="news-grid">
+  <div id="news-container" class="news-grid" data-items-per-page="6">
     
     <!-- PAGE 1 -->
     <div class="card news-item" data-page="1">
-        <h4>AWS re:Invent : Trainium 3</h4>
-        <small>04 Décembre 2024 - InformatiqueNews</small>
-        <p>AWS dévoile sa puce Trainium 3 et l'Ultracluster Rainier. Une puissance de calcul massive pour concurrencer Nvidia sur l'IA générative.</p>
-        <a href="https://www.informatiquenews.fr/reinvent-2024-amazon-aws-annonce-trainium3-et-lultracluster-rainier-pour-l-ia-102054" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>AWS Weekly Roundup (30 mars 2026)</h4>
+      <small>30 mars 2026 - AWS News Blog</small>
+      <p>Panorama hebdomadaire AWS orienté IA et serverless avec plusieurs annonces produit et retours communauté.</p>
+      <a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-ai-ml-scholars-program-agent-plugin-for-aws-serverless-and-more-march-30-2026/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="1">
-        <h4>Les Agents IA d'AWS</h4>
-        <small>08 Janvier 2025 - Devoteam</small>
-        <p>Analyse des annonces AWS : les agents génératifs automatisent désormais des workflows complexes (facturation, support) via Amazon Q.</p>
-        <a href="https://www.devoteam.com/expert-view/aws-ai-reinvent-2024/" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>Aurora PostgreSQL serverless en quelques secondes</h4>
+      <small>25 mars 2026 - AWS News Blog</small>
+      <p>AWS simplifie le provisioning de bases PostgreSQL serverless avec une configuration express pensée pour accélérer le démarrage.</p>
+      <a href="https://aws.amazon.com/blogs/aws/announcing-amazon-aurora-postgresql-serverless-database-creation-in-seconds/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="1">
-        <h4>Incidents Cloudflare</h4>
-        <small>Novembre 2024/2025 - Cloudflare Blog</small>
-        <p>Suivi technique des interruptions de service. Analyse post-incident des perturbations de routage ayant affecté l'accès à certains services web.</p>
-        <a href="https://blog.cloudflare.com/tag/outage/" target="_blank" class="btn-certif">Lire le rapport</a>
+      <h4>Personnalisation de la console AWS</h4>
+      <small>26 mars 2026 - AWS News Blog</small>
+      <p>La console permet de masquer services/régions non utilisés pour gagner en lisibilité et réduire les erreurs de manipulation.</p>
+      <a href="https://aws.amazon.com/blogs/aws/customize-your-aws-management-console-experience-with-visual-settings-including-account-color-region-and-service-visibility/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="1">
-        <h4>Microsoft : Résultats Cloud</h4>
-        <small>30 Octobre 2024 - Microsoft Source</small>
-        <p>Le Cloud Microsoft (Azure) tire la croissance avec une hausse de 20% des revenus. L'IA contribue massivement à ces résultats trimestriels.</p>
-        <a href="https://news.microsoft.com/source/2024/10/30/microsoft-cloud-strength-drives-first-quarter-results-7/" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>20 ans d'Amazon S3</h4>
+      <small>13 mars 2026 - AWS News Blog</small>
+      <p>Retour sur l'évolution de S3, devenu socle de nombreux usages cloud, data lake et IA grâce à de nouveaux services autour des données.</p>
+      <a href="https://aws.amazon.com/blogs/aws/twenty-years-of-amazon-s3-and-building-whats-next/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="1">
+      <h4>Cloudflare ouvre Client-Side Security à tous</h4>
+      <small>30 mars 2026 - Cloudflare Blog</small>
+      <p>Cloudflare démocratise ses capacités de détection côté navigateur avec des mécanismes IA pour limiter les faux positifs.</p>
+      <a href="https://blog.cloudflare.com/client-side-security-open-to-everyone/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="1">
+      <h4>Custom Regions pour la souveraineté des données</h4>
+      <small>18 mars 2026 - Cloudflare Blog</small>
+      <p>Cloudflare ajoute des régions personnalisées afin de mieux contrôler où les données sont traitées, point clé conformité.</p>
+      <a href="https://blog.cloudflare.com/custom-regions/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <!-- PAGE 2 -->
     <div class="card news-item" data-page="2" style="display:none;">
-        <h4>Claude 3.5 & Computer Use</h4>
-        <small>22 Octobre 2024 - Anthropic</small>
-        <p>Lancement de la fonctionnalité "Computer Use" qui permet à l'IA Claude 3.5 de contrôler un ordinateur (souris, clavier) comme un humain.</p>
-        <a href="https://www.anthropic.com/news/3-5-models-and-computer-use" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>Workers AI exécute des modèles plus volumineux</h4>
+      <small>19 mars 2026 - Cloudflare Blog</small>
+      <p>Cloudflare étend son offre IA pour supporter des modèles plus lourds et améliorer les coûts/performances de l'inférence.</p>
+      <a href="https://blog.cloudflare.com/workers-ai-large-models/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="2" style="display:none;">
-        <h4>OpenAI lance le modèle o1</h4>
-        <small>Décembre 2024 - Wikipédia/OpenAI</small>
-        <p>Sortie finale du modèle o1 (Strawberry), capable de raisonner sur des problèmes complexes de mathématiques et de code avant de répondre.</p>
-        <a href="https://openai.com/index/learning-to-reason-with-llms/" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>Sandboxing d'agents IA 100x plus rapide</h4>
+      <small>24 mars 2026 - Cloudflare Blog</small>
+      <p>Dynamic Workers accélère l'exécution de code généré par IA dans un environnement isolé, utile pour des agents sécurisés.</p>
+      <a href="https://blog.cloudflare.com/dynamic-workers/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="2" style="display:none;">
-        <h4>OVHcloud & Quantique</h4>
-        <small>Mars 2024 - Maddyness</small>
-        <p>OVHcloud inaugure son premier ordinateur quantique avec la startup Quandela, marquant une étape clé pour la souveraineté technologique.</p>
-        <a href="https://www.maddyness.com/2024/03/18/ovhcloud-inaugure-son-tout-premier-ordinateur-quantique-avec-la-startup-quandela/" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>Agentic cloud operations sur Azure</h4>
+      <small>février 2026 - Microsoft Azure Blog</small>
+      <p>Microsoft décrit une approche d'exploitation cloud pilotée par agents IA pour fiabiliser et accélérer les opérations.</p>
+      <a href="https://azure.microsoft.com/en-us/blog/agentic-cloud-operations-a-new-way-to-run-the-cloud/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="2" style="display:none;">
-        <h4>Régulation Cloud Arcep</h4>
-        <small>Juin 2025 - Arcep</small>
-        <p>L'Arcep et les régulateurs européens publient leurs avis sur les défis du Cloud : interopérabilité, DMA et équité concurrentielle.</p>
-        <a href="https://www.arcep.fr/actualites/les-prises-de-parole/detail/n/tribune-adlc-dgccrf-arcep-arcom-cnil-050625.html" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>Many agents, one team</h4>
+      <small>11 février 2026 - Microsoft Azure Blog</small>
+      <p>Cas d'usage de modernisation applicative avec plusieurs agents IA coordonnés sur Azure.</p>
+      <a href="https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="2" style="display:none;">
+      <h4>Nouveaux agents Azure Copilot et innovations infra</h4>
+      <small>31 octobre 2025 - Microsoft Azure Blog</small>
+      <p>Annonce de nouvelles capacités d'agents et d'infrastructure IA dans l'écosystème Azure.</p>
+      <a href="https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <!-- PAGE 3 -->
-    <div class="card news-item" data-page="3" style="display:none;">
-        <h4>Marché IaaS : +22%</h4>
-        <small>Août 2025 - Gartner</small>
-        <p>Le marché mondial du IaaS a cru de 22.5% en 2024. Amazon garde la tête (37.7%) suivi de Microsoft (23.9%) et Google (9%).</p>
-        <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-06-gartner-says-worldwide-iaas-public-cloud-services-market-grew-22-point-5-percent-in-2024" target="_blank" class="btn-certif">Lire l'article</a>
+    <div class="card news-item" data-page="2" style="display:none;">
+      <h4>Azure IaaS series : ressources d'infrastructure</h4>
+      <small>4 mars 2026 - Microsoft Azure Blog</small>
+      <p>Microsoft publie des ressources pour optimiser performance, coûts et robustesse des architectures IaaS.</p>
+      <a href="https://azure.microsoft.com/en-us/blog/azure-iaas-series-explore-new-resources-for-building-a-stronger-more-efficient-infrastructure/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="3" style="display:none;">
-        <h4>Investissements Google</h4>
-        <small>Février 2025 - DCmag</small>
-        <p>Google annonce investir 75 milliards de dollars en 2025, principalement dans ses datacenters pour soutenir la demande en IA.</p>
-        <a href="https://dcmag.fr/google-va-investir-75-milliards-en-2025/" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>PostgreSQL on Azure supercharged for AI</h4>
+      <small>2 février 2026 - Microsoft Azure Blog</small>
+      <p>Renforcement des usages IA autour de PostgreSQL managé sur Azure pour les applications data intensives.</p>
+      <a href="https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="3" style="display:none;">
-        <h4>GitHub Copilot & Claude</h4>
-        <small>29 Octobre 2024 - Anthropic</small>
-        <p>Intégration officielle du modèle Claude 3.5 Sonnet dans GitHub Copilot, offrant aux développeurs une alternative performante aux modèles GPT.</p>
-        <a href="https://www.anthropic.com/news/github-copilot" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>Snapshots incrémentaux avec restauration immédiate</h4>
+      <small>2 mars 2026 - Microsoft Azure Blog</small>
+      <p>Évolution stockage pour réduire le temps de restauration et améliorer la continuité de service.</p>
+      <a href="https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
     <div class="card news-item" data-page="3" style="display:none;">
-        <h4>Explosion Dépenses Datacenter</h4>
-        <small>Janvier 2025 - CIO Online</small>
-        <p>Les dépenses en équipements pour datacenters ont atteint un niveau record, portées à 55% par les fournisseurs de Cloud Public.</p>
-        <a href="https://www.cio-online.com/actualites/lire-la-croissance-des-depenses-dans-les-datacenters-atteint-un-niveau-record-16093.html" target="_blank" class="btn-certif">Lire l'article</a>
+      <h4>Google Cloud et NVIDIA élargissent l'infra IA</h4>
+      <small>mars 2026 - Google Cloud Blog</small>
+      <p>Partenariat renforcé pour accélérer les workloads IA en entreprise et améliorer le rapport coût/performance.</p>
+      <a href="https://cloud.google.com/blog/products/compute/google-cloud-ai-infrastructure-at-nvidia-gtc-2026" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="3" style="display:none;">
+      <h4>GKE et innovations OSS à KubeCon Europe 2026</h4>
+      <small>mars 2026 - Google Cloud Blog</small>
+      <p>Google met en avant Kubernetes comme socle de l'ère IA et l'apport de l'open source dans cette évolution.</p>
+      <a href="https://cloud.google.com/blog/products/containers-kubernetes/gke-and-oss-innovation-at-kubecon-eu-2026" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="card news-item" data-page="3" style="display:none;">
+      <h4>Guide d'entraînement sur TPU Ironwood</h4>
+      <small>mars 2026 - Google Cloud Blog</small>
+      <p>Publication technique sur l'entraînement de modèles IA à grande échelle avec les nouveaux TPU Ironwood.</p>
+      <a href="https://cloud.google.com/blog/products/compute/training-large-models-on-ironwood-tpus" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="3" style="display:none;">
+      <h4>BigQuery Studio renforcé par Gemini</h4>
+      <small>mars 2026 - Google Cloud Blog</small>
+      <p>L'assistant Gemini dans BigQuery Studio facilite l'analyse et la productivité des équipes data.</p>
+      <a href="https://cloud.google.com/blog/products/data-analytics/gemini-supercharges-the-bigquery-studio-assistant" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="4" style="display:none;">
+      <h4>Cloud SQL : autoscaling des read pools</h4>
+      <small>mars 2026 - Google Cloud Blog</small>
+      <p>Fonctionnalité d'auto-scalabilité pour améliorer la tenue en charge des bases Cloud SQL orientées lecture.</p>
+      <a href="https://cloud.google.com/blog/products/databases/cloudsql-read-pools-support-autoscaling" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="4" style="display:none;">
+      <h4>Wiz rejoint Google Cloud</h4>
+      <small>2026 - Google Cloud Blog</small>
+      <p>Google officialise l'arrivée de Wiz pour renforcer la sécurité cloud à l'ère de l'IA.</p>
+      <a href="https://cloud.google.com/blog/products/identity-security/google-completes-acquisition-of-wiz" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="4" style="display:none;">
+      <h4>Construire des agents IA avec serveurs MCP managés</h4>
+      <small>2026 - Google Cloud Blog</small>
+      <p>Approche pratique pour créer des agents IA en production avec des briques managées orientées développeurs.</p>
+      <a href="https://cloud.google.com/blog/products/ai-machine-learning/how-to-build-ai-agents-with-google-managed-mcp-servers" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <!-- PAGE 5 -->
+    <div class="card news-item" data-page="4" style="display:none;">
+      <h4>Cloud IaaS : l'IA générative propulse le marché</h4>
+      <small>23 février 2026 - IT for Business</small>
+      <p>Analyse de la croissance du marché IaaS, fortement tirée par les besoins en IA générative.</p>
+      <a href="https://www.itforbusiness.fr/cloud-iaas-lia-generative-a-propulse-le-marche-mondial-a-119-md-au-dernier-trimestre-2025-100709" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="4" style="display:none;">
+      <h4>AWS re:Invent 2025 et IA agentique industrielle</h4>
+      <small>5 décembre 2025 - IT for Business</small>
+      <p>Décryptage des annonces AWS autour des agents IA, de l'infrastructure et de la chaîne de production applicative.</p>
+      <a href="https://www.itforbusiness.fr/aws-reinvent-2025-amazon-transforme-lia-agentique-en-chaine-de-montage-industrielle-97870" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="4" style="display:none;">
+      <h4>S3NS obtient la certification SecNumCloud</h4>
+      <small>5 janvier 2026 - IT for Business</small>
+      <p>Étape importante pour le cloud de confiance en France avec impacts sur les stratégies souveraines.</p>
+      <a href="https://www.itforbusiness.fr/s3ns-obtient-la-certification-secnumcloud-voila-qui-va-relancer-les-debats-98899" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="5" style="display:none;">
+      <h4>NumSpot et plateforme hybride de confiance</h4>
+      <small>10 décembre 2025 - IT for Business</small>
+      <p>Évolution du positionnement de NumSpot autour de l'hybride et de la souveraineté face aux hyperscalers.</p>
+      <a href="https://www.itforbusiness.fr/numspot-se-reinvente-en-plateforme-hybride-de-confiance-98077" target="_blank" class="btn-certif">Lire l'article</a>
+    </div>
+
+    <div class="card news-item" data-page="5" style="display:none;">
+      <h4>Recycler ses serveurs pour stocker</h4>
+      <small>30 mars 2026 - Solutions Numériques</small>
+      <p>Retour de pratiques de réemploi infrastructure pour contenir les coûts de stockage et prolonger la durée de vie matérielle.</p>
+      <a href="https://www.solutions-numeriques.com/recycler-ses-serveurs-pour-stocker-une-reponse-a-la-hausse-des-couts/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
   </div>
 
-  <div class="pagination-container">
-    <button class="page-btn active" onclick="showPage(1)">1</button>
-    <button class="page-btn" onclick="showPage(2)">2</button>
-    <button class="page-btn" onclick="showPage(3)">3</button>
-  </div>
-
-  <script>
-  function showPage(pageNumber) {
-    // 1. On cache toutes les news
-    const allItems = document.querySelectorAll('.news-item');
-    allItems.forEach(item => {
-      item.style.display = 'none';
-    });
-
-    // 2. On affiche seulement celles de la page demandée
-    const itemsToShow = document.querySelectorAll(`.news-item[data-page="${pageNumber}"]`);
-    itemsToShow.forEach(item => {
-      // On remet 'flex' pour garder la mise en page de la carte
-      item.style.display = 'flex'; 
-    });
-
-    // 3. Gestion des boutons (Bleu pour l'actif)
-    const buttons = document.querySelectorAll('.page-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    
-    // On active le bon bouton (Index = pageNumber - 1)
-    if (buttons[pageNumber - 1]) {
-      buttons[pageNumber - 1].classList.add('active');
-    }
-  }
-
-  // Petit correctif : Au chargement, on force l'affichage de la page 1
-  document.addEventListener('DOMContentLoaded', () => {
-     showPage(1);
-  });
-</script>
+  <div class="pagination-container"></div>
 
 </section>
 

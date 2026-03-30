@@ -1,10 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
+function bootstrapPage() {
     // Note: Plus de initTheme() ici, on a un thème unique
-    
-    // Initialiser les galeries de certificats s'il y en a
     initCertifications();
+    initPagination();
+}
 
-    // Initialiser la pagination s'il y en a
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootstrapPage);
+} else {
+    bootstrapPage();
+}
+
+// Recalcule la pagination quand la page revient du cache navigateur (bfcache).
+window.addEventListener('pageshow', () => {
     initPagination();
 });
 
@@ -18,6 +25,9 @@ function initCertifications() {
     if (certifButtons.length === 0) return;
 
     certifButtons.forEach(button => {
+        if (button.dataset.certifBound === '1') return;
+        button.dataset.certifBound = '1';
+
         button.addEventListener('click', (e) => {
             // Si c'est un lien, on empêche la navigation
             // (Note: pour des boutons <button>, e.preventDefault n'est pas nécessaire par défaut sauf form submit)
@@ -66,42 +76,65 @@ function initCertifications() {
    GESTION DE LA PAGINATION (Veille.html)
    ========================================================================== */
 function initPagination() {
-    const pageButtons = document.querySelectorAll('.page-btn');
-    if (pageButtons.length === 0) return;
+    const newsContainer = document.getElementById('news-container');
+    const paginationContainer = document.querySelector('.pagination-container');
 
-    pageButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Récupérer le numéro de page depuis le texte du bouton ou un attribut data
-            // (Ici on assume que le texte du bouton est "1", "2", etc.)
-            const pageNumber = this.textContent.trim();
-            // Appeler la logique d'affichage
-            updatePageDisplay(pageNumber);
-        });
-    });
+    if (!newsContainer || !paginationContainer) return;
+
+    const newsItems = Array.from(newsContainer.querySelectorAll('.news-item'));
+    if (newsItems.length === 0) return;
+
+    const itemsPerPage = Number(newsContainer.dataset.itemsPerPage || 6);
+    const totalPages = Math.ceil(newsItems.length / itemsPerPage);
+
+    // Stocke un etat unique de pagination pour eviter toute derive d'attributs HTML.
+    window.__newsPagination = {
+        items: newsItems,
+        itemsPerPage,
+        totalPages
+    };
+
+    // Regenere les boutons selon les pages qui ont vraiment du contenu.
+    paginationContainer.innerHTML = '';
+
+    for (let page = 1; page <= totalPages; page++) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `page-btn${page === 1 ? ' active' : ''}`;
+        btn.textContent = String(page);
+        btn.dataset.pageBtn = String(page);
+        btn.addEventListener('click', () => updatePageDisplay(page));
+        paginationContainer.appendChild(btn);
+    }
+
+    updatePageDisplay(1);
 }
 
 // Fonction logique d'affichage 
 function updatePageDisplay(pageNumber) {
-    // 1. Masquer tous les items
-    const allNews = document.querySelectorAll('.news-item');
-    allNews.forEach(item => item.style.display = 'none');
+    const state = window.__newsPagination;
+    if (!state || !Array.isArray(state.items) || state.items.length === 0) return;
 
-    // 2. Afficher les items de la target
-    // Astuce: Si data-page="1", on affiche. 
-    // Attention: Si on a plusieurs items par page, ils auront tous data-page="1"
-    const targetNews = document.querySelectorAll(`.news-item[data-page="${pageNumber}"]`);
-    targetNews.forEach(item => item.style.display = 'flex'); 
+    const clampedPage = Math.min(Math.max(Number(pageNumber) || 1, 1), state.totalPages);
+    const start = (clampedPage - 1) * state.itemsPerPage;
+    const end = start + state.itemsPerPage;
+
+    // 1. Masquer tous les items
+    state.items.forEach(item => {
+        item.style.display = 'none';
+    });
+
+    // 2. Afficher les items de la page calculee par index
+    state.items.slice(start, end).forEach(item => {
+        item.style.display = 'flex';
+    });
 
     // 3. Mettre à jour l'état actif des boutons
     const buttons = document.querySelectorAll('.page-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // On cherche le bouton qui correspond au numéro cliqué pour l'activer
-    buttons.forEach(btn => {
-        if (btn.textContent.trim() === String(pageNumber)) {
-            btn.classList.add('active');
-        }
-    });
+    const activeBtn = document.querySelector(`.page-btn[data-page-btn="${clampedPage}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
 }
 
 // Global scope pour compatibilité legacy
