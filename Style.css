@@ -393,6 +393,43 @@ section h2::after {
   color: #fff;
 }
 
+/* News Metadata */
+.news-metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-metadata span {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.badge-borning {
+  background-color: #1f6feb26;
+  color: #58a6ff;
+  border-left: 3px solid #58a6ff;
+}
+
+.badge-author {
+  background-color: #23863626;
+  color: #3fb950;
+  border-left: 3px solid #3fb950;
+}
+
+.badge-date {
+  background-color: #6e768126;
+  color: #8b949e;
+  border-left: 3px solid #8b949e;
+}
+
 /* ==========================================================================
    SPÉCIFIQUE : STAGE (Layout Détail)
    ========================================================================== */
