@@ -6,7 +6,7 @@
   <title>Veille Technologique – Esteban Laurent</title>
   <link href="Style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -21,7 +21,6 @@
     <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
     <li class="nav-item"><a class="nav-link active" href="veille.html">Veille Techno</a></li>
     <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisation</a></li>
-
   </ul>
 </nav>
 
@@ -31,7 +30,7 @@
   <div class="resume-bloc">
     <h3><i class="fas fa-cloud"></i> Le Cloud Computing</h3>
     <p><strong>Définition :</strong> Le cloud computing (« informatique dans les nuages ») correspond à l'accès via un réseau de télécommunications, à la demande et en libre-service, à des ressources informatiques partagées configurables.</p>
-    <p style="margin-top: 10px;">
+    <p>
         Concrètement, cela permet de déporter le stockage et la puissance de calcul sur des serveurs distants plutôt que sur sa machine locale. C'est aujourd'hui la base de l'infrastructure web moderne (AWS, Azure, Google Cloud).
     </p>
   </div>
@@ -52,9 +51,8 @@
     </div>
   </div>
 
-<h2 style="margin-top: 40px;">Bornages et Outils de veille</h2>
-
-<div class="bornage-grid">
+  <h2>Bornages et Outils de veille</h2>
+  <div class="bornage-grid">
     
     <div class="bornage-card">
         <h3>Outils de Veille</h3>
@@ -98,19 +96,19 @@
             Combinaison des deux : données sensibles en privé, puissance de calcul en public.
         </div>
 
-        <div class="bornage-item" style="border-top: 1px solid #eee; padding-top: 10px; margin-top: 15px;">
+        <div class="bornage-item" style="border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 15px;">
             <strong>Leaders du Marché :</strong>
             1. AWS (34%)<br>
             2. Microsoft Azure (21%)<br>
             3. Google Cloud (11%)
         </div>
     </div>
-
-</div>
+  </div>
 
   <h2>Mes Actualités</h2>
   <div id="news-container" class="news-grid">
     
+    <!-- PAGE 1 -->
     <div class="card news-item" data-page="1">
         <h4>AWS re:Invent : Trainium 3</h4>
         <small>04 Décembre 2024 - InformatiqueNews</small>
@@ -139,6 +137,7 @@
         <a href="https://news.microsoft.com/source/2024/10/30/microsoft-cloud-strength-drives-first-quarter-results-7/" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
+    <!-- PAGE 2 -->
     <div class="card news-item" data-page="2" style="display:none;">
         <h4>Claude 3.5 & Computer Use</h4>
         <small>22 Octobre 2024 - Anthropic</small>
@@ -167,6 +166,7 @@
         <a href="https://www.arcep.fr/actualites/les-prises-de-parole/detail/n/tribune-adlc-dgccrf-arcep-arcom-cnil-050625.html" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
+    <!-- PAGE 3 -->
     <div class="card news-item" data-page="3" style="display:none;">
         <h4>Marché IaaS : +22%</h4>
         <small>Août 2025 - Gartner</small>
@@ -195,7 +195,6 @@
         <a href="https://www.cio-online.com/actualites/lire-la-croissance-des-depenses-dans-les-datacenters-atteint-un-niveau-record-16093.html" target="_blank" class="btn-certif">Lire l'article</a>
     </div>
 
-</div>
   </div>
 
   <div class="pagination-container">
@@ -236,37 +235,10 @@
 </script>
 
 </section>
-<button id="toggle-theme" title="Changer le thème" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">🌙</button>
 
-<script>
-  (function() {
-    // 1. DÉTECTION IMMÉDIATE (Pour appliquer le thème avant même que tu cliques)
-    const savedTheme = localStorage.getItem('theme');
-    const btn = document.getElementById('toggle-theme');
-    const body = document.body;
+<footer>
+  <p>&copy; 2026 – Esteban Laurent</p>
+</footer>
 
-    // Si la mémoire dit "light", on force le mode clair tout de suite
-    if (savedTheme === 'light') {
-      body.classList.add('light-theme');
-      if (btn) btn.textContent = '🌞';
-    }
-
-    // 2. GESTION DU CLIC
-    if (btn) {
-      btn.addEventListener('click', function() {
-        // On bascule la classe
-        body.classList.toggle('light-theme');
-
-        // On vérifie le résultat pour sauvegarder la bonne info
-        if (body.classList.contains('light-theme')) {
-          localStorage.setItem('theme', 'light'); // On écrit "light" dans la mémoire
-          btn.textContent = '🌞';
-        } else {
-          localStorage.setItem('theme', 'dark');  // On écrit "dark" dans la mémoire
-          btn.textContent = '🌙';
-        }
-      });
-    }
-  })();
-</script>
+</body>
 </html>

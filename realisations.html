@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Réalisation – Esteban Laurent</title>
+  <title>Réalisations – Esteban Laurent</title>
   <link href="Style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -33,45 +34,39 @@
   <div class="stages-container">
 
     <!-- Stage 1ère année -->
-    <div class="card">
+    <div class="card stage-card">
       <h3><i class="fas fa-briefcase"></i> Stage de 1ère année</h3>
       <p>Développement d’applications internes au sein de la DSI de Rouen.</p>
       
-      <a href="stage1.html" class="btn-link">
-        <i class="fas fa-book-open"></i> Voir le déroulé du stage
-      </a>
-      
-      <div class="attestation">
-        <h4><i class="fas fa-file-pdf"></i> Attestation de stage</h4>
-        <embed src="attestations/stage1.pdf" type="application/pdf">
-        <a href="attestations/stage1.pdf" download class="btn-download">
-          <i class="fas fa-download"></i> Télécharger
+      <div style="margin-top: auto;">
+        <a href="stage1.html" class="btn-certif">
+            <i class="fas fa-book-open"></i> Voir le déroulé du stage
         </a>
+        
+        <div class="attestation" style="margin-top: 15px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+            <p style="font-size: 0.9em; font-weight: bold; margin-bottom: 5px;">Attestation de stage :</p>
+            <a href="docs/Stage/ELA_Attestation_De_Stage_signed.pdf" target="_blank" class="btn-certif" style="background-color: var(--card-hover-bg); color: var(--text-color) !important; font-size: 0.8em;">
+            <i class="fas fa-file-pdf"></i> Télécharger PDF
+            </a>
+        </div>
       </div>
     </div>
 
-    <!-- Stage 2ème année -->
-    <div class="card">
+    <!-- Stage 2ème année (Non renseigné, placeholder) -->
+    <div class="card stage-card">
       <h3><i class="fas fa-briefcase"></i> Stage de 2ème année</h3>
-      <p>Projet de développement prévu en entreprise (à compléter).</p>
+      <p>Projet de développement prévu en entreprise.</p>
       
-      <a href="stage2.html" class="btn-link">
-        <i class="fas fa-book-open"></i> Voir le déroulé du stage
-      </a>
-      
-      <div class="attestation">
-        <h4><i class="fas fa-file-pdf"></i> Attestation de stage</h4>
-        <embed src="attestations/stage2.pdf" type="application/pdf">
-        <a href="attestations/stage2.pdf" download class="btn-download">
-          <i class="fas fa-download"></i> Télécharger
-        </a>
+      <div style="margin-top: auto; opacity: 0.6;">
+        <!-- Bouton inactif pour l'instant -->
+        <span class="btn-certif" style="background-color: var(--border-color); cursor: not-allowed;">
+            <i class="fas fa-clock"></i> À venir
+        </span>
       </div>
     </div>
 
   </div>
 </section>
-
-
 
 <section id="competences2a">
   <h2>Compétences réalisées en 2ème année</h2>
@@ -94,41 +89,8 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 – Esteban Laurent | BTS SIO SLAM</p>
+  <p>&copy; 2026 – Esteban Laurent</p>
 </footer>
 
-<button id="toggle-theme" title="Changer le thème" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">🌙</button>
-
-<script>
-  (function() {
-    // 1. DÉTECTION IMMÉDIATE (Pour appliquer le thème avant même que tu cliques)
-    const savedTheme = localStorage.getItem('theme');
-    const btn = document.getElementById('toggle-theme');
-    const body = document.body;
-
-    // Si la mémoire dit "light", on force le mode clair tout de suite
-    if (savedTheme === 'light') {
-      body.classList.add('light-theme');
-      if (btn) btn.textContent = '🌞';
-    }
-
-    // 2. GESTION DU CLIC
-    if (btn) {
-      btn.addEventListener('click', function() {
-        // On bascule la classe
-        body.classList.toggle('light-theme');
-
-        // On vérifie le résultat pour sauvegarder la bonne info
-        if (body.classList.contains('light-theme')) {
-          localStorage.setItem('theme', 'light'); // On écrit "light" dans la mémoire
-          btn.textContent = '🌞';
-        } else {
-          localStorage.setItem('theme', 'dark');  // On écrit "dark" dans la mémoire
-          btn.textContent = '🌙';
-        }
-      });
-    }
-  })();
-</script>
 </body>
 </html>

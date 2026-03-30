@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rectorat – Esteban Laurent</title>
   <link href="Style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -16,66 +18,45 @@
 <nav class="navbar">
   <ul class="navbar-nav">
     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-    <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
-        <li class="nav-item"><a class="nav-link" href="veille.html">Veille Techno</a></li>
+    <li class="nav-item"><a class="nav-link active" href="rectorats.html">Rectorat</a></li>
+    <li class="nav-item"><a class="nav-link" href="veille.html">Veille Techno</a></li>
     <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisation</a></li>
   </ul>
 </nav>
-<section id="rectorat">
-    <h2>Rectorat - Tableau de synthèse</h2>
 
+<section id="synthese">
+  <h2>Rectorat - Tableau de synthèse</h2>
   <div class="card-container">
     <a href="docs/ELA_TableauDeSyntheses.xlsx" target="_blank" class="card">
-      <h3>📄 Tableau de synthèse</h3>
+      <h3><i class="fas fa-file-excel"></i> Tableau de synthèse</h3>
       <p>Téléchargement du Tableau de synthèse.</p>
     </a>
   </div>
 </section>
 
-<section id="rectorat">
-    <h2>Rectorat - Attestation de stage 1ère année</h2>
-
+<section id="attestation">
+  <h2>Rectorat - Attestation de stage 1ère année</h2>
   <div class="card-container">
     <a href="docs/Stage/ELA_Attestation_De_Stage_signed.pdf" target="_blank" class="card">
-      <h3>📄 Attestation de stage</h3>
+      <h3><i class="fas fa-file-pdf"></i> Attestation de stage</h3>
       <p>Téléchargement de l'attestation de stage.</p>
     </a>
   </div>
 </section>
 
-<button id="toggle-theme" title="Changer le thème" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">🌙</button>
+<section id="attestation">
+  <h2>Rectorat - Attestation de stage 2ème année</h2>
+  <div class="card-container">
+    <a href="docs/Stage/ELA_Attestation_De_Stage_signed.pdf" target="_blank" class="card">
+      <h3><i class="fas fa-file-pdf"></i> Attestation de stage</h3>
+      <p>Téléchargement de l'attestation de stage.</p>
+    </a>
+  </div>
+</section>
 
-<script>
-  (function() {
-    // 1. DÉTECTION IMMÉDIATE (Pour appliquer le thème avant même que tu cliques)
-    const savedTheme = localStorage.getItem('theme');
-    const btn = document.getElementById('toggle-theme');
-    const body = document.body;
+<footer>
+  <p>&copy; 2026 – Esteban Laurent</p>
+</footer>
 
-    // Si la mémoire dit "light", on force le mode clair tout de suite
-    if (savedTheme === 'light') {
-      body.classList.add('light-theme');
-      if (btn) btn.textContent = '🌞';
-    }
-
-    // 2. GESTION DU CLIC
-    if (btn) {
-      btn.addEventListener('click', function() {
-        // On bascule la classe
-        body.classList.toggle('light-theme');
-
-        // On vérifie le résultat pour sauvegarder la bonne info
-        if (body.classList.contains('light-theme')) {
-          localStorage.setItem('theme', 'light'); // On écrit "light" dans la mémoire
-          btn.textContent = '🌞';
-        } else {
-          localStorage.setItem('theme', 'dark');  // On écrit "dark" dans la mémoire
-          btn.textContent = '🌙';
-        }
-      });
-    }
-  })();
-</script>
 </body>
 </html>
-

@@ -6,75 +6,7 @@
   <title>Stage DSI – Esteban Laurent</title>
   <link href="Style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <style>
-    /* CSS SPÉCIFIQUE PAGE STAGE */
-    .stage-header-info {
-        display: flex;
-        justify-content: space-around;
-        background: #f8f9fa;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 30px;
-        border: 1px solid #dee2e6;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .info-pill {
-        font-weight: bold;
-        color: #333;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .info-pill i { color: #3498db; }
-
-    .stage-grid {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 30px;
-        flex-wrap: wrap;
-    }
-    .stage-card {
-        flex: 1;
-        background: #fff;
-        padding: 25px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        border: 1px solid #eee;
-        min-width: 300px;
-    }
-    .stage-card h3 {
-        margin-top: 0;
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        color: #2c3e50;
-        font-size: 1.3rem;
-    }
-    .tech-badge {
-        display: inline-block;
-        background-color: #eef2f7;
-        color: #2c3e50;
-        padding: 5px 12px;
-        border-radius: 15px;
-        font-size: 0.9em;
-        font-weight: 600;
-        margin: 3px;
-        border: 1px solid #dce4ec;
-    }
-
-    /* Gestion Dark Mode */
-    body:not(.light-theme) .stage-header-info,
-    body:not(.light-theme) .stage-card {
-        background-color: #222;
-        color: #fff;
-        border-color: #444;
-    }
-    body:not(.light-theme) .info-pill { color: #fff; }
-    body:not(.light-theme) .tech-badge { background-color: #444; color: #fff; border-color: #555; }
-    body:not(.light-theme) h2, body:not(.light-theme) h3 { color: #fff; }
-  </style>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -92,9 +24,9 @@
   </ul>
 </nav>
 
-<section id="stage" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+<section id="stage">
   
-  <a href="realisations.html" class="btn-retour" style="display:inline-block; margin-bottom:20px; text-decoration:none; color:#3498db;">
+  <a href="realisations.html" class="btn-retour">
     <i class="fas fa-arrow-left"></i> Retour aux réalisations
   </a>
 
@@ -134,59 +66,31 @@
       
       <p><strong>Objectif :</strong> Améliorer l'ergonomie de l'application interne permettant de consulter l'historique des employés.</p>
 
-      <ul style="margin-top: 15px; line-height: 1.6;">
-          <li><i class="fas fa-check" style="color:#2ecc71; margin-right:10px;"></i> <strong>Correction de bugs :</strong> Analyse et résolution d'incidents front et back-end.</li>
-          <li><i class="fas fa-check" style="color:#2ecc71; margin-right:10px;"></i> <strong>Feature "Autocomplétion" :</strong> 
+      <ul class="no-bullets" style="margin-top: 15px; line-height: 1.6;">
+          <li><i class="fas fa-check" style="color: var(--success-color); margin-right:10px;"></i> <strong>Correction de bugs :</strong> Analyse et résolution d'incidents front et back-end.</li>
+          <li><i class="fas fa-check" style="color: var(--success-color); margin-right:10px;"></i> <strong>Feature "Autocomplétion" :</strong> 
               Développement d'un système de suggestion automatique lors de la saisie (recherche). 
               <br><em>Technique : Création d'un Controller Java pour interroger la BDD et adaptation du JavaScript pour afficher 5-6 suggestions dynamiques.</em>
           </li>
-          <li><i class="fas fa-check" style="color:#2ecc71; margin-right:10px;"></i> <strong>Réunions :</strong> Participation aux points d'équipe sur l'authentification 2FA.</li>
+          <li><i class="fas fa-check" style="color: var(--success-color); margin-right:10px;"></i> <strong>Réunions :</strong> Participation aux points d'équipe sur l'authentification 2FA.</li>
       </ul>
   </div>
 
-  <div class="stage-card" style="border-left: 5px solid #3498db;">
+  <div class="stage-card" style="border-left: 5px solid var(--accent-color);">
       <h3><i class="fas fa-graduation-cap"></i> Bilan de compétences</h3>
       <p>Ce stage m'a permis de passer de la théorie à la pratique dans un environnement complexe.</p>
       <ul style="margin-top: 10px;">
           <li>Maitrise du framework <strong>Spring Boot</strong> en contexte réel.</li>
-          <li>Compréhension des flux de données <strong>Controller <-> Vue</strong>.</li>
+          <li>Compréhension des flux de données <strong>Controller ↔ Vue</strong>.</li>
           <li>Découverte du travail collaboratif en entreprise (GitLab, Code Review).</li>
       </ul>
   </div>
 
-<button id="toggle-theme" title="Changer le thème" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">🌙</button>
+</section>
 
-<script>
-  (function() {
-    // 1. DÉTECTION IMMÉDIATE (Pour appliquer le thème avant même que tu cliques)
-    const savedTheme = localStorage.getItem('theme');
-    const btn = document.getElementById('toggle-theme');
-    const body = document.body;
-
-    // Si la mémoire dit "light", on force le mode clair tout de suite
-    if (savedTheme === 'light') {
-      body.classList.add('light-theme');
-      if (btn) btn.textContent = '🌞';
-    }
-
-    // 2. GESTION DU CLIC
-    if (btn) {
-      btn.addEventListener('click', function() {
-        // On bascule la classe
-        body.classList.toggle('light-theme');
-
-        // On vérifie le résultat pour sauvegarder la bonne info
-        if (body.classList.contains('light-theme')) {
-          localStorage.setItem('theme', 'light'); // On écrit "light" dans la mémoire
-          btn.textContent = '🌞';
-        } else {
-          localStorage.setItem('theme', 'dark');  // On écrit "dark" dans la mémoire
-          btn.textContent = '🌙';
-        }
-      });
-    }
-  })();
-</script>
+<footer>
+  <p>&copy; 2026 – Esteban Laurent</p>
+</footer>
 
 </body>
 </html>
