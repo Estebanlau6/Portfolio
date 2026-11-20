@@ -3,25 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07090d" />
   <title>Veille Technologique – Esteban Laurent</title>
+  <link rel="icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="Style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <h1>Esteban Laurent</h1>
-  <p>Étudiant en BTS SIO SLAM</p>
-</header>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<div class="scroll-progress" aria-hidden="true"></div>
 
-<nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-    <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
-    <li class="nav-item"><a class="nav-link active" href="veille.html">Veille Techno</a></li>
-    <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisation</a></li>
-  </ul>
-</nav>
+<header class="site-nav">
+  <nav class="navbar" aria-label="Navigation principale">
+    <a class="brand" href="index.html" aria-label="Esteban Laurent — accueil">EL<i></i></a>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+      <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
+      <li class="nav-item"><a class="nav-link active" href="veille.html">Veille Techno</a></li>
+      <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisations</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#contact">Me contacter <i class="fas fa-arrow-right"></i></a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+  </nav>
+</header>
+<main id="main">
+
+<div class="page-hero"><span class="eyebrow">Veille technologique</span><h1>Le <em>Cloud</em>, au jour le jour</h1><p>Sujet, outils, bornage, retour d'expérience et actualités sélectionnées.</p></div>
 
 <section id="sujet-veille">
   <h2>Ma Veille Technologique</h2>
@@ -424,9 +435,16 @@
 
 </section>
 
+</main>
 <footer>
-  <p>&copy; 2026 – Esteban Laurent</p>
+  <p>&copy; 2026 – Esteban Laurent · BTS SIO SLAM</p>
+  <div class="foot-links">
+    <a href="index.html">Accueil</a><a href="rectorats.html">Rectorat</a><a href="veille.html">Veille</a><a href="realisations.html">Réalisations</a>
+  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

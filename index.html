@@ -3,46 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Accueil – Esteban Laurent</title>
+  <title>Esteban Laurent — Développeur applicatif · BTS SIO SLAM</title>
+  <meta name="description" content="Portfolio d'Esteban Laurent, étudiant en BTS SIO option SLAM : applications web et métiers, stages, veille technologique et réalisations. En recherche d'alternance en développement applicatif." />
+  <meta name="theme-color" content="#07090d" />
+  <meta property="og:title" content="Esteban Laurent — Développeur applicatif" />
+  <meta property="og:description" content="Applications web et métiers, stages, veille et réalisations — portfolio BTS SIO SLAM." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="Style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="home">
+<a class="skip-link" href="#apropos">Aller au contenu</a>
+<div class="scroll-progress" aria-hidden="true"></div>
 
-<header>
-  <h1>Esteban Laurent</h1>
-  <p>Étudiant en BTS SIO SLAM</p>
+<header class="site-nav">
+  <nav class="navbar" aria-label="Navigation principale">
+    <a class="brand" href="index.html" aria-label="Esteban Laurent — accueil">EL<i></i></a>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+      <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
+      <li class="nav-item"><a class="nav-link" href="veille.html">Veille Techno</a></li>
+      <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisations</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Me contacter <i class="fas fa-arrow-right"></i></a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+  </nav>
 </header>
 
-<nav class="navbar">
-  <ul class="navbar-nav">
-    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-    <li class="nav-item"><a class="nav-link" href="rectorats.html">Rectorat</a></li>
-    <li class="nav-item"><a class="nav-link" href="veille.html">Veille Techno</a></li>
-    <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisation</a></li>
-  </ul>
-</nav>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div>
+      <div class="status-chip"><span class="dot"></span> En recherche d'alternance · développement applicatif</div>
+      <h1 aria-label="Esteban Laurent, développeur applicatif">
+        <span class="mask"><span class="ligne">Esteban</span></span>
+        <span class="mask"><span class="ligne"><em>Laurent</em>,</span></span>
+        <span class="mask"><span class="ligne">développeur.</span></span>
+      </h1>
+      <p class="lead">Étudiant en <strong>BTS SIO option SLAM</strong>, je conçois des applications web et métiers — de l'analyse du besoin à la mise en production. Admis au <strong>CESI</strong> pour la suite.</p>
+      <div class="hero-cta">
+        <a href="mailto:laurentesteban321@gmail.com" class="btn-primary"><i class="fas fa-envelope"></i> Me contacter</a>
+        <a href="realisations.html" class="btn-certif"><i class="fas fa-layer-group"></i> Voir mes réalisations</a>
+        <a href="https://linkedin.com/in/estebanlaurent" target="_blank" rel="noopener" class="btn-certif" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Estebanlau6" target="_blank" rel="noopener" class="btn-certif" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
 
-<section id="infos-perso">
-  <h2>À propos</h2>
-  <div class="card" style="margin-bottom: 2rem;">
-    <p style="font-size: 1.1rem;">
-      Étudiant en 2ème année de BTS SIO option SLAM, je recherche une alternance en développement applicatif pour la rentrée 2026, après mon admission au <strong>CESI</strong> en 3ème année de développeur concepteur d'application.
-    </p>
-    <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a href="mailto:laurentesteban321@gmail.com" class="btn-certif"><i class="fas fa-envelope"></i> Me contacter</a>
-        <a href="https://linkedin.com/in/estebanlaurent" target="_blank" class="btn-certif"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/Estebanlau6" target="_blank" class="btn-certif"><i class="fab fa-github"></i> GitHub</a>
+    <div class="code-card" aria-hidden="true">
+      <div class="code-bar"><i></i><i></i><i></i><span>esteban.js</span></div>
+<pre><span class="ln"><span class="c-k">const</span> <span class="c-p">esteban</span> = {</span>
+<span class="ln">  <span class="c-p">formation</span>: <span class="c-s">"BTS SIO · SLAM"</span>,</span>
+<span class="ln">  <span class="c-p">ensuite</span>: <span class="c-s">"CESI · Concepteur d'app"</span>,</span>
+<span class="ln">  <span class="c-p">stack</span>: [<span class="c-s">"Java"</span>, <span class="c-s">"React"</span>, <span class="c-s">"C#"</span>, <span class="c-s">"PHP"</span>],</span>
+<span class="ln">  <span class="c-p">base</span>: <span class="c-s">"Rouen"</span>,</span>
+<span class="ln">  <span class="c-p">veille</span>: <span class="c-s">"Cloud Computing"</span>,</span>
+<span class="ln">  <span class="c-p">cherche</span>: <span class="c-s">"alternance"</span>,</span>
+<span class="ln">};</span>
+<span class="ln"><span class="c-c">// prêt à construire la suite</span><span class="caret"></span></span></pre>
     </div>
   </div>
+  <div class="scroll-hint" aria-hidden="true">Défiler</div>
 </section>
 
-<!-- CAROUSEL COMPETENCES -->
-<section id="competences">
-  <h2>Compétences Techniques</h2>
+<!-- ============ COMPÉTENCES ============ -->
+<section class="marquee-wrap" id="competences" aria-label="Compétences techniques">
   <div class="carousel-container">
     <div class="carousel-track">
-      <!-- Set 1 -->
       <div class="skill-card"><i class="fab fa-microsoft"></i> C#</div>
       <div class="skill-card"><i class="fab fa-java"></i> Java</div>
       <div class="skill-card"><i class="fab fa-python"></i> Python</div>
@@ -50,140 +81,229 @@
       <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
       <div class="skill-card"><i class="fab fa-react"></i> React</div>
       <div class="skill-card"><i class="fas fa-database"></i> SQL</div>
-      <div class="skill-card"><i class="fab fa-html5"></i> HTML/CSS</div>
+      <div class="skill-card"><i class="fab fa-html5"></i> HTML / CSS</div>
       <div class="skill-card"><i class="fab fa-docker"></i> Docker</div>
       <div class="skill-card"><i class="fab fa-linux"></i> Linux</div>
       <div class="skill-card"><i class="fab fa-git-alt"></i> Git</div>
-      
-      <!-- Set 2 (Duplicate for smooth scroll) -->
-      <div class="skill-card"><i class="fab fa-microsoft"></i> C#</div>
-      <div class="skill-card"><i class="fab fa-java"></i> Java</div>
-      <div class="skill-card"><i class="fab fa-python"></i> Python</div>
-      <div class="skill-card"><i class="fab fa-php"></i> PHP</div>
-      <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
-      <div class="skill-card"><i class="fab fa-react"></i> React</div>
-      <div class="skill-card"><i class="fas fa-database"></i> SQL</div>
-      <div class="skill-card"><i class="fab fa-html5"></i> HTML/CSS</div>
-      <div class="skill-card"><i class="fab fa-docker"></i> Docker</div>
-      <div class="skill-card"><i class="fab fa-linux"></i> Linux</div>
-      <div class="skill-card"><i class="fab fa-git-alt"></i> Git</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-microsoft"></i> C#</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-java"></i> Java</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-python"></i> Python</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-php"></i> PHP</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-react"></i> React</div>
+      <div class="skill-card" aria-hidden="true"><i class="fas fa-database"></i> SQL</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-html5"></i> HTML / CSS</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-docker"></i> Docker</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-linux"></i> Linux</div>
+      <div class="skill-card" aria-hidden="true"><i class="fab fa-git-alt"></i> Git</div>
+    </div>
+  </div>
+  <div class="carousel-container rev" aria-hidden="true">
+    <div class="carousel-track">
+      <div class="skill-card"><i class="fas fa-leaf"></i> Spring Boot</div>
+      <div class="skill-card"><i class="fab fa-node-js"></i> Node.js</div>
+      <div class="skill-card"><i class="fas fa-code-branch"></i> Symfony</div>
+      <div class="skill-card"><i class="fas fa-headset"></i> GLPI</div>
+      <div class="skill-card"><i class="fas fa-shield-alt"></i> RGPD</div>
+      <div class="skill-card"><i class="fas fa-lock"></i> Cybersécurité</div>
+      <div class="skill-card"><i class="fab fa-gitlab"></i> GitLab</div>
+      <div class="skill-card"><i class="fas fa-cloud"></i> Cloud</div>
+      <div class="skill-card"><i class="fas fa-leaf"></i> Spring Boot</div>
+      <div class="skill-card"><i class="fab fa-node-js"></i> Node.js</div>
+      <div class="skill-card"><i class="fas fa-code-branch"></i> Symfony</div>
+      <div class="skill-card"><i class="fas fa-headset"></i> GLPI</div>
+      <div class="skill-card"><i class="fas fa-shield-alt"></i> RGPD</div>
+      <div class="skill-card"><i class="fas fa-lock"></i> Cybersécurité</div>
+      <div class="skill-card"><i class="fab fa-gitlab"></i> GitLab</div>
+      <div class="skill-card"><i class="fas fa-cloud"></i> Cloud</div>
     </div>
   </div>
 </section>
 
-<section id="experience">
-  <h2>Expériences Professionnelles</h2>
-  <div class="card-container">
-    
-    <!-- Stage Di-Eureka -->
-    <div class="card">
-        <h3 style="display:flex; justify-content:space-between; align-items:center;">
-             <span>Stagiaire Développeur</span>
-             <small style="font-size:0.8rem; color:var(--text-muted);">Jan. 2026 – Fév. 2026</small>
-        </h3>
-        <h4 style="color:var(--accent-color);">Di-Eureka (Rouen)</h4>
-        <p>Développement d'une application de vente de pièces détachées.</p>
-        <div style="margin-top: 10px;">
-          <span class="tech-badge">React</span>
-          <span class="tech-badge">Node.js</span>
-        </div>
-    </div>
+<!-- ============ CHIFFRES ============ -->
+<section style="padding-top:0; padding-bottom:0" aria-label="En chiffres">
+  <div class="stats">
+    <div class="stat"><b data-count="2">2</b><span>stages en développement (DSI universitaire, Di-Eureka)</span></div>
+    <div class="stat"><b data-count="24">24</b><span>réalisations documentées</span></div>
+    <div class="stat"><b data-count="5">5</b><span>modules RGPD validés</span></div>
+    <div class="stat"><b data-count="460">460</b><span>points au score Pix</span></div>
+  </div>
+</section>
 
-    <!-- Stage Université -->
-    <div class="card">
-        <h3 style="display:flex; justify-content:space-between; align-items:center;">
-             <span>Stagiaire Développeur</span>
-             <small style="font-size:0.8rem; color:var(--text-muted);">Mai 2025 – Juin 2025</small>
-        </h3>
-        <h4 style="color:var(--accent-color);">DSI Univ. Mont-Saint-Aignan</h4>
-        <p>Conception et développement d'une application de gestion RH.</p>
-        <div style="margin-top: 10px;">
-          <span class="tech-badge">Java</span>
-          <span class="tech-badge">Thymeleaf</span>
-        </div>
+<!-- ============ À PROPOS ============ -->
+<section id="apropos">
+  <span class="eyebrow">À propos</span>
+  <div class="bento">
+    <div class="card b-wide">
+      <p class="big-quote">Je transforme des besoins métiers en <em>applications fiables</em> : de l'analyse à la mise en ligne, en passant par les tests, la sécurité et la veille.</p>
+      <p style="margin-top:1.2rem">Étudiant en 2<sup>e</sup> année de BTS SIO option SLAM, je recherche une <strong>alternance en développement applicatif</strong> après mon admission au <strong>CESI</strong> en 3<sup>e</sup> année de développeur concepteur d'application.</p>
+      <div class="link-row">
+        <a href="mailto:laurentesteban321@gmail.com" class="btn-primary"><i class="fas fa-envelope"></i> Écrire un mail</a>
+        <a href="https://linkedin.com/in/estebanlaurent" target="_blank" rel="noopener" class="btn-certif"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/Estebanlau6" target="_blank" rel="noopener" class="btn-certif"><i class="fab fa-github"></i> GitHub</a>
+      </div>
     </div>
+    <div class="card b-narrow">
+      <span class="label">Prochaine étape</span>
+      <div class="big-num">CESI</div>
+      <p style="margin:0">Admis en 3<sup>e</sup> année · Développeur concepteur d'application, en alternance.</p>
+    </div>
+    <div class="card b-half">
+      <span class="label">Ce que je cherche</span>
+      <h3>Une équipe de développement</h3>
+      <p style="margin:0">Un cadre où l'on livre des applications utiles — et où l'on apprend vite, sur des stacks modernes (Java, React, C#, PHP).</p>
+    </div>
+    <div class="card b-half">
+      <span class="label">Ma veille</span>
+      <h3>Le Cloud Computing</h3>
+      <p>Environnements de dev hébergés, collaboration, cloud public / privé / hybride.</p>
+      <a href="veille.html" class="more" style="font-weight:600">Lire ma veille <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
 
-    <!-- Interim -->
-    <div class="card">
-        <h3>Missions Intérim & Jobs d'été</h3>
-        <ul class="no-bullets" style="padding:0; margin-top:5px; font-size:0.9rem; color: var(--text-color);">
-            <li style="margin-bottom:8px;"><i class="fas fa-truck" style="color:var(--text-muted); margin-right:8px; width:20px;"></i> <strong>Dec 2025 – Jan 2026 :</strong> Agent de Collecte (Rouen)</li>
-            <li style="margin-bottom:8px;"><i class="fas fa-trash-alt" style="color:var(--text-muted); margin-right:8px; width:20px;"></i> <strong>Août 2025 :</strong> Ripeur (Elbeuf)</li>
-            <li style="margin-bottom:8px;"><i class="fas fa-boxes" style="color:var(--text-muted); margin-right:8px; width:20px;"></i> <strong>Juil. 2025 :</strong> Manutentionnaire (STEF)</li>
+<!-- ============ PARCOURS ============ -->
+<section id="parcours">
+  <span class="eyebrow">Parcours</span>
+  <h2>Expériences &amp; formation</h2>
+  <div class="timeline">
+    <span class="tl-line" aria-hidden="true"></span>
+
+    <article class="tl-item">
+      <div class="card">
+        <div class="tl-head"><h3>Stagiaire Développeur</h3><span class="tl-date">Jan. – Fév. 2026</span></div>
+        <div class="tl-org">Di-Eureka · Rouen</div>
+        <p>Développement d'une application de vente de pièces détachées : recherche, filtrage et parcours de commande.</p>
+        <div><span class="tech-badge">React</span><span class="tech-badge">Node.js</span><span class="tech-badge">SQL</span></div>
+        <a class="more" href="stage2.html" style="margin-top:.8rem">Voir le déroulé du stage <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="card">
+        <div class="tl-head"><h3>Stagiaire Développeur</h3><span class="tl-date">Mai – Juin 2025</span></div>
+        <div class="tl-org">DSI Université · Mont-Saint-Aignan</div>
+        <p>Amélioration de l'application interne « Historique-RH » : correction de bugs, ergonomie et autocomplétion de la recherche.</p>
+        <div><span class="tech-badge">Java</span><span class="tech-badge">Spring Boot</span><span class="tech-badge">Thymeleaf</span><span class="tech-badge">PostgreSQL</span></div>
+        <a class="more" href="stage1.html" style="margin-top:.8rem">Voir le déroulé du stage <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="card">
+        <div class="tl-head"><h3>Missions d'intérim &amp; jobs d'été</h3><span class="tl-date">2025 – 2026</span></div>
+        <ul class="job-list">
+          <li><i class="fas fa-truck"></i><span><strong>Déc. 2025 – Jan. 2026</strong> · Agent de collecte (Rouen)</span></li>
+          <li><i class="fas fa-trash-alt"></i><span><strong>Août 2025</strong> · Ripeur (Elbeuf)</span></li>
+          <li><i class="fas fa-boxes"></i><span><strong>Juil. 2025</strong> · Manutentionnaire (STEF)</span></li>
         </ul>
-    </div>
+      </div>
+    </article>
 
+    <article class="tl-item">
+      <div class="card">
+        <div class="tl-head"><h3>BTS SIO — option SLAM</h3><span class="tl-date">2024 – Présent</span></div>
+        <div class="tl-org">Lycée La Châtaigneraie · Rouen</div>
+        <p>Solutions Logicielles et Applications Métiers. Option : Mathématiques approfondies.</p>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="card">
+        <div class="tl-head"><h3>Baccalauréat général</h3><span class="tl-date">Juin 2024</span></div>
+        <div class="tl-org">Lycée Marcel Sembat · Sotteville-lès-Rouen</div>
+        <p>Spécialités Mathématiques et SES.</p>
+      </div>
+    </article>
   </div>
 </section>
 
-<section id="formation">
-  <h2>Formation</h2>
-  <div class="card-container">
-      <div class="card">
-          <h3>2024 – Présent</h3>
-          <h4 style="margin-bottom: 0.5rem;">BTS SIO – Option SLAM</h4>
-          <p class="text-muted" style="margin-bottom: 0.5rem;">Lycée La Châtaigneraie – Rouen</p>
-          <p><i class="fas fa-check" style="color:var(--success-color);"></i> Spécialité : Solutions Logiciels et Applications Métiers</p>
-          <p><i class="fas fa-check" style="color:var(--success-color);"></i> Option : Mathématiques Approfondies</p>
-      </div>
-      <div class="card">
-          <h3>Juin 2024</h3>
-          <h4 style="margin-bottom: 0.5rem;">Baccalauréat Général</h4>
-          <p class="text-muted" style="margin-bottom: 0.5rem;">Lycée Marcel Sembat – Sotteville-lès-Rouen</p>
-          <p>Spécialités : Mathématiques et SES</p>
-      </div>
+<!-- ============ RÉALISATIONS ============ -->
+<section id="realisations">
+  <span class="eyebrow">Réalisations</span>
+  <h2>Ce que j'ai construit</h2>
+  <div class="work-grid">
+    <a class="card work-card" href="realisations.html#formation">
+      <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+      <div><span class="n">01</span><h3>Applications métiers</h3><p>Gestion des stages (Symfony), gestion de voyages (MAUI C#), bases SQL et droits d'accès.</p></div>
+    </a>
+    <a class="card work-card" href="realisations.html#formation">
+      <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+      <div><span class="n">02</span><h3>Support &amp; qualité</h3><p>Installation de GLPI, validation W3C, structuration sémantique et accessibilité.</p></div>
+    </a>
+    <a class="card work-card" href="realisations.html#formation">
+      <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+      <div><span class="n">03</span><h3>Projets en équipe</h3><p>Site d'équipe statique puis dynamique, mise en ligne, Trello et analyse de besoins (GSK).</p></div>
+    </a>
+    <a class="card work-card" href="realisations.html#formation">
+      <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+      <div><span class="n">04</span><h3>Cybernews &amp; présence en ligne</h3><p>Site de veille cybersécurité alimenté par base de données, portfolio, profil LinkedIn.</p></div>
+    </a>
   </div>
+  <div class="link-row"><a href="realisations.html" class="btn-primary">Toutes les réalisations <i class="fas fa-arrow-right"></i></a></div>
 </section>
 
-
+<!-- ============ CERTIFICATIONS ============ -->
 <section id="certifications">
-  <h2>Certifications</h2>
+  <span class="eyebrow">Certifications</span>
+  <h2>Preuves &amp; validations</h2>
   <div class="certifications-container">
-    
-    <!-- Certification RGPD -->
     <div class="card certif-card">
-      <h4><i class="fas fa-shield-alt"></i> Certification RGPD</h4>
+      <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+      <h4>Certification RGPD</h4>
       <p>5 modules validés</p>
-      <button class="btn-certif" data-target="rgpd">Voir les preuves</button>
-
+      <button class="btn-certif" type="button" data-target="rgpd"><i class="fas fa-eye"></i> Voir les preuves</button>
       <div class="pdf-gallery hidden" data-gallery="rgpd">
-        <iframe src="certifs/RGPD/Certificat1_.pdf" title="Certificat RGPD 1"></iframe>
-        <iframe src="certifs/RGPD/Certificat2.pdf" title="Certificat RGPD 2"></iframe>
-        <iframe src="certifs/RGPD/Certificat3_.pdf" title="Certificat RGPD 3"></iframe>
-        <iframe src="certifs/RGPD/Certificat4_.pdf" title="Certificat RGPD 4"></iframe>
-        <iframe src="certifs/RGPD/Certificat5_.pdf" title="Certificat RGPD 5"></iframe>
+        <iframe src="certifs/RGPD/Certificat1_.pdf" title="Certificat RGPD 1" loading="lazy"></iframe>
+        <iframe src="certifs/RGPD/Certificat2.pdf" title="Certificat RGPD 2" loading="lazy"></iframe>
+        <iframe src="certifs/RGPD/Certificat3_.pdf" title="Certificat RGPD 3" loading="lazy"></iframe>
+        <iframe src="certifs/RGPD/Certificat4_.pdf" title="Certificat RGPD 4" loading="lazy"></iframe>
+        <iframe src="certifs/RGPD/Certificat5_.pdf" title="Certificat RGPD 5" loading="lazy"></iframe>
       </div>
     </div>
-
-    <!-- Certification ANSSI -->
     <div class="card certif-card">
-      <h4><i class="fas fa-lock"></i> Certification ANSSI</h4>
-      <p>SecNumAcadémie</p>
-      <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-muted);">Capture de ma certification a afficher ici (preuve personnelle).</p>
+      <div class="cert-icon"><i class="fas fa-lock"></i></div>
+      <h4>Certification ANSSI</h4>
+      <p>SecNumAcadémie — parcours de sensibilisation à la cybersécurité</p>
+      <a href="realisations/mooc-anssi.html" class="btn-certif">Voir le détail <i class="fas fa-arrow-right"></i></a>
     </div>
-
-    <!-- Certification PIX -->
     <div class="card certif-card">
-      <h4><i class="fas fa-award"></i> Certification PIX</h4>
-      <p>Score : 460 points</p>
-      <div style="margin-top:auto;"></div> <!-- Spacer -->
+      <div class="cert-icon"><i class="fas fa-award"></i></div>
+      <h4>Certification Pix</h4>
+      <div class="score">460<small>points</small></div>
+      <p>Compétences numériques</p>
+      <a href="realisations/score-pix.html" class="btn-certif">Voir le détail <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
+<!-- ============ CONTACT ============ -->
 <section id="contact">
-  <h2>Centres d'intérêt</h2>
-  <div class="card">
-      <ul class="interets-list" style="padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
-          <li><i class="fas fa-laptop-code"></i> Veille Tech & Innovation</li>
-          <li><i class="fas fa-film"></i> Cinéma & Analyse d'œuvres</li>
-      </ul>
+  <div class="contact-cta">
+    <span class="eyebrow">Contact</span>
+    <h2>Construisons <em>quelque chose</em> ensemble.</h2>
+    <p>Une alternance en développement applicatif à proposer ? Une question sur mes projets ? Écrivez-moi, je réponds vite.</p>
+    <div class="hero-cta">
+      <a href="mailto:laurentesteban321@gmail.com" class="btn-primary"><i class="fas fa-envelope"></i> laurentesteban321@gmail.com</a>
+      <a href="https://linkedin.com/in/estebanlaurent" target="_blank" rel="noopener" class="btn-certif"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/Estebanlau6" target="_blank" rel="noopener" class="btn-certif"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+    <ul class="interets">
+      <li><i class="fas fa-laptop-code"></i> Veille tech &amp; innovation</li>
+      <li><i class="fas fa-film"></i> Cinéma &amp; analyse d'œuvres</li>
+    </ul>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2026 – Esteban Laurent</p>
+  <p>&copy; 2026 – Esteban Laurent · BTS SIO SLAM</p>
+  <div class="foot-links">
+    <a href="index.html">Accueil</a><a href="rectorats.html">Rectorat</a><a href="veille.html">Veille</a><a href="realisations.html">Réalisations</a>
+  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
